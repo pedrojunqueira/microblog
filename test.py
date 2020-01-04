@@ -1,7 +1,9 @@
 from datetime import datetime, timedelta
 import unittest
-from app import app, db
+from app import db, create_app
 from app.models import User, Post
+
+app = create_app()
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
